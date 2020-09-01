@@ -1,0 +1,80 @@
+
+.choice {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    animation: appear 2s linear;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.choice img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    max-width: 400px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn_wrapper {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    max-width: 500px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: flex;
+}
+
+.btn_wrapper > div {
+    flex: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 20px;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.btn_wrapper div:first-child {
+    background: darkgreen;
+}
+.btn_wrapper div:first-child a{
+    text-decoration: none;
+    width: 100%;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn_wrapper div:last-child {
+    color: black;
+    background: white;
+}
+
+
+@keyframes appear {
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes disappear {
+
+    100% {
+        opacity: 0;
+        display: none;
+        visibility: hidden;
+    }
+}

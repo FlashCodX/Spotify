@@ -1,0 +1,147 @@
+.footer {
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    justify-content: space-around;
+}
+
+
+
+.footer .progress {
+    position: absolute;
+    width: 100%;
+    top: -10px;
+    left: 0;
+    font-size: 10px;
+    cursor: pointer;
+    height: 10px;
+}
+
+
+.progress:hover > #timestamp{
+    visibility: visible !important;
+    display: block !important;
+}
+
+.footer .progress > #bar {
+    width: 0;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background: green;
+    position: absolute;
+}
+
+
+.progress #timestamp{
+    font-size: 13px;
+    top: -20px;
+    /*display: none;*/
+    visibility: hidden;
+    left: 50px;
+    padding: 0 4px;
+    position: absolute;
+    background: darkslateblue;
+}
+
+.song_info {
+    min-width: 155px;
+    flex: .3;
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+}
+
+
+.controls {
+    flex: .4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound_controls {
+    flex: .3;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px !important;
+    margin-right: 30px;
+}
+
+.controls svg {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+.song_info > div {
+    font-size: 12px;
+    display: block;
+    align-self: flex-end;
+    margin-left: 10px;
+}
+
+.song_info img {
+    width: 50px;
+}
+
+.song_info p {
+    margin-left: 5px;
+
+}
+
+.song_info > div > p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.song_info > div p:last-child {
+    font-size: 10px;
+    margin-bottom: 7px;
+    font-weight: lighter;
+}
+
+
+
+
+.sound_controls .wrapper {
+    max-width: 250px;
+    width: 100%;
+}
+
+.wrapper .slider{
+    color: whitesmoke !important;
+}
+
+.wrapper .volume {
+    display: flex;
+    align-items: center;
+}
+
+.volume > svg:first-child {
+    margin-right: 10px;
+}
+
+.sound_controls > svg:first-child {
+    margin-right: 10px;
+}
+
+.sound_controls p {
+    color: red;
+    min-width: 100px;
+}
+
+
+
+
+
+
+
+

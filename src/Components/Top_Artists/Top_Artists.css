@@ -1,0 +1,126 @@
+
+.home .right {
+    flex: .2;
+    color: white;
+}
+
+.right .profile {
+    display: flex;
+    margin: 10px 0;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.right .profile > p {
+    margin-left: 10px;
+}
+
+
+
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.profile .dropdown {
+    position: relative;
+    margin-top: 60px;
+    cursor: pointer;
+    background: black !important;
+    border: 2px solid black;
+    margin-right: 50px;
+    margin-left: -20px;
+}
+
+.profile svg{
+    cursor: pointer;
+}
+
+
+.dropdown p {
+    font-size: 12px;
+    cursor: pointer;
+    padding: 2px;
+    background: black;
+}
+
+.dropdown p:hover{
+    background: white;
+    color: black;
+}
+
+.right .recommendations {
+    /*background: rgba(30,30,30,.2);*/
+    margin: 20px;
+    border-radius: 20px;
+    background: linear-gradient(rgba(30, 30, 30,.1),rgba(230, 255, 255, .1));
+    padding: 10px 15px;
+}
+
+
+
+.recommendations .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.r_content {
+    height: 74vh !important;
+    overflow-y: auto;
+}
+
+.r_content::-webkit-scrollbar {
+    display: none;
+}
+
+.recommendations .r_content > div {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.r_content  svg{
+    margin-left: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.r_content  svg:hover{
+    transform: scale(1.2);
+    transition: 200ms;
+}
+
+.r_content > div > div {
+    margin-left: 10px;
+}
+
+.recommendations .r_content img {
+    width: 65px;
+}
+
+.recommendations .r_content > div p:first-child{
+    font-size: 18px ;
+    font-weight: bold;
+}
+
+.r_content > div p:nth-child(2n){
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.r_content > div p:nth-child(2n) > span{
+    color: #1DB954;
+    font-weight: bold;
+}
+
+
+.recommendations .r_content > div p:last-child{
+    font-size: 12px;
+    margin-top: 5px;
+    color: dimgray!important;
+}
