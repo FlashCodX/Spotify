@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import './Footer.css'
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import SkipNextRoundedIcon from '@material-ui/icons/SkipNextRounded';
@@ -11,23 +11,21 @@ import {useDataValue} from "../../Data/DataProvider";
 import {DemoData} from "../../DemoData/DemoData";
 
 
-export const s_audio_player = new Audio(null)
+export const s_audio_player = new Audio(DemoData.top_tracks[0].preview_url)
 s_audio_player.volume = 0.5
 
 export default function Footer() {
 
     const [{
-
-        demo,
         playing, current,
-        top_tracks, timestamp,progress
+        top_tracks, timestamp, progress
     }, dispatch] = useDataValue();
 
     let label = null
 
     function play(track) {
         s_audio_player.src = track.preview_url
-        s_audio_player.play()
+        s_audio_player.play().then(_ => null)
     }
 
 
@@ -43,8 +41,6 @@ export default function Footer() {
         });
 
     }
-
-
 
 
     function handlePlay() {
@@ -63,7 +59,7 @@ export default function Footer() {
         } else {
             s_audio_player.src = top_tracks[current].preview_url
             s_audio_player.currentTime = timestamp
-            s_audio_player.play()
+            s_audio_player.play().then(_ => null)
         }
 
 
@@ -78,9 +74,8 @@ export default function Footer() {
             });
             dispatch({
                 type: "SET_CURRENT",
-                current: current+1 ,
+                current: current + 1,
             })
-            console.log(current)
 
 
             dispatch({
@@ -156,15 +151,13 @@ export default function Footer() {
 
 
         window.onmousemove = function () {
-            const calc = ((window.event['clientX'] * 30) / window.innerWidth).toLocaleString().replace(',', '')
-            label.style.left = `${window.event['clientX']}px`
+            const calc = ((window['event']['clientX'] * 30) / window.innerWidth).toLocaleString().replace(',', '')
+            label.style.left = `${window['event']['clientX']}px`
             label.innerHTML = millisToMinutesAndSeconds(calc)
         }
 
 
     }
-
-
 
 
     function millisToMinutesAndSeconds(millis) {
@@ -181,15 +174,14 @@ export default function Footer() {
 
 
     function handleBarCLick() {
-
-        const result = window.event['clientX'] * 30 / window.innerWidth
-
+        const result = window['event']['clientX'] * 30 / window.innerWidth
         s_audio_player.currentTime = result
         dispatch({
             type: "SET_PROGRESS",
             progress: result,
         });
     }
+
     return (
         <div className={'footer'}>
             <div className={'progress'} id={'progress'} onMouseOver={() => handleHover()}

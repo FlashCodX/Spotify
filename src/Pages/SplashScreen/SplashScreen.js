@@ -13,15 +13,10 @@ export default class SplashScreen extends React.Component {
 
     }
 
-
-
-
     componentDidMount() {
-
         const interval = setInterval(() => {
             const progress = this.state.progress
             this.setState({progress: (progress + 2)}, () => {
-
                 if (this.state.progress >= 100) clearInterval(interval)
 
             })
@@ -33,7 +28,6 @@ export default class SplashScreen extends React.Component {
 
 
     render() {
-        // this.load()
         return (
             <main className={'SplashScreen'}>
                 <div className="wrapper" data-anim="base wrapper">
@@ -45,10 +39,6 @@ export default class SplashScreen extends React.Component {
 
                     <div className={'author'}><span>by Flash</span><span>codX</span></div>
                 </div>
-
-
-
-
             </main>
         )
     }

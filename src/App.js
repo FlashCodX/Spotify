@@ -27,7 +27,6 @@ export default function App() {
                 window.location.reload()
             }else {
                 result.json().then((data)=>{
-                    console.log(data)
                     dispatch({
                         type: "SET_USER",
                         user:data,
@@ -70,7 +69,6 @@ export default function App() {
             .then(res => res.json())
             .then((data)=>{
                 let available = []
-                console.log(data)
                 data.items.forEach((track) => {
                     if (track.track.preview_url) available.push(track.track)
                 })
@@ -84,13 +82,11 @@ export default function App() {
     }
 
     useEffect(() => {
-        // dispatch({
-        //     type: "SET_DEMO",
-        //     demo: true,
-        // });
+
 
         const inStorageToken = localStorage.getItem('s_token')
         if (inStorageToken) {
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             _token = inStorageToken
             dispatch({
                 type: "SET_TOKEN",
@@ -105,29 +101,8 @@ export default function App() {
                 dispatch({
                     type: "SET_TOKEN",
                     token: _token
-                    ,
                 });
                 window.location.hash = "";
-
-
-            } else {
-
-
-                //
-                // dispatch({
-                //     type: "SET_PLAYLISTS",
-                //     playlists: DemoData.playlists,
-                // });
-                //
-                // dispatch({
-                //     type: "SET_ARTISTS",
-                //     artists: DemoData.top_artists,
-                // })
-                //
-                // dispatch({
-                //     type: "SET_TOP_TRACKS",
-                //     top_tracks: DemoData.top_tracks,
-                // })
             }
         }
     }, [token, dispatch]);
@@ -135,7 +110,6 @@ export default function App() {
     return (
         <main>
             <SplashScreen/>
-            {/*<Home/>*/}
             {token ? <Home/> : <Choice/>}
         </main>
     );

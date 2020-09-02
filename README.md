@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SPOTIFY
 
-## Available Scripts
+![alt text]('assets/preview.png')
 
-In the project directory, you can run:
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-### `npm start`
+This Project is replica of the original Spotify Web App, made with React Js.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> Check out the app:  flashcodx.github.io/Spotify/
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+# Features!
+  - Has a Demo and a Login Option with the Spotify API.
+  - Displays Current User Playlists, favorite tracks and Artists.
+  - Can play a preview of the desired song.
+  - Has volume Control, pause and play functionality.
+  - Can skip to a position by clicking on the progress bar.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Tech
+* [REACT] - HTML enhanced for web apps!
+* [WebStorm Editor] - awesome web-based text editor made by JetBrains.
+* [SPOTIFY API] - Used to gather data for the Application.
+* [Material UI Icons] - Used to display Icons on the App.
+* [Node.js] - Required by React to work properly.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Requirements and Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+AVICII requires [Node.js](https://nodejs.org/)  to run.
+Also make sure you have  [GIT](https://git-scm.com/) installed, it makes you life easier.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Clone and install all needed dependencies.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+$ git clone https://github.com/FlashCodX/Spotify
+$ cd Spotify
+$ npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Go to the [Spotify DashBoard](https://developer.spotify.com/dashboard/applications) and create a new app.
+Copy the client Id from the created app and replace the constant value "clientID" on the spotify.js file.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Running the App
+This will start a local server using node, and should be available on http://localhost:3000/Spotify .
+```sh
+$ npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+License
+----
+MIT
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Free Software, Hell Yeah!**
 
-### Code Splitting
+   [React]: <https://reactjs.org/>
+   [WebStorm Editor]: <https://www.jetbrains.com/webstorm/r>
+   [SPOTIFY API]: <https://developer.spotify.com/>
+   [Material UI Icons]: <https://material-ui.com/pt/components/material-icons/>
+   [markdown-it]: <https://github.com/markdown-it/markdown-it>
+   [Ace Editor]: <http://ace.ajax.org>
+   [Node.js]: <http://nodejs.org>
+ 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  

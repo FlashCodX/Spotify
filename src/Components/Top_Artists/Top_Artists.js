@@ -23,13 +23,13 @@ export default function Top_Artists() {
 
 
     function returnArtists() {
-        let artists_data = []
+        let artists_data
         let artists_obj = []
         demo ? artists_data = DemoData.top_artists : artists_data = artists
 
         artists_data.forEach((artist, i) => {
             artists_obj.push(<div key={i}>
-                <img src={artist.images[0].url} alt=""/>
+                <img src={artist.images[0].url} alt="artist"/>
                 <div>
                     <p>{artist.name}</p>
                     <p>Followers: <span>{artist.followers.total.toLocaleString()}</span></p>
@@ -37,7 +37,6 @@ export default function Top_Artists() {
 
                 </div>
             </div>)
-
         })
         return artists_obj
 
@@ -48,7 +47,7 @@ export default function Top_Artists() {
         if (genres.length >= 2) {
             genres = genres.slice(0, 2)
         }
-        genres.map((genre, i) => {
+        genres.forEach((genre, i) => {
             i === 0 ? Genres = genre : Genres = Genres + ', ' + genre
         })
 
@@ -73,7 +72,7 @@ export default function Top_Artists() {
                 <p onClick={() => logOut()}>Log Out</p>
             </div>
         </div>
-        <div className={'recommendations'}>
+        <div className={'top_artists'}>
             <div className={'title'}>
                 <p>Your Top Artists</p>
             </div>

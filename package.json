@@ -1,6 +1,6 @@
 {
-  "name": "spotify_remastered",
-  "homepage": "https://flashcodx.github.io/spotify",
+  "name": "Spotify",
+  "homepage": "https://FlashCodX.github.io/Spotify",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

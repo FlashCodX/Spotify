@@ -26,8 +26,7 @@ export default function Top_tracks() {
             s_audio_player.src = top_tracks[current].preview_url
             s_audio_player.currentTime = timestamp
 
-
-            s_audio_player.play().then(_ => null)
+            s_audio_player.play().then(_ => null).catch(()=>null)
         }
 
         if (track.id !== top_tracks[current].id) {
@@ -48,12 +47,11 @@ export default function Top_tracks() {
             s_audio_player.src = track.preview_url
 
 
-            try {
-                s_audio_player.play()
 
-            } catch (e) {
 
-            }
+                s_audio_player.play().then().catch((()=>null))
+
+
 
             s_audio_player.currentTime = 0
 
@@ -69,11 +67,12 @@ export default function Top_tracks() {
         }
 
     }
+
     function returnTracks() {
         let tracks = []
         top_tracks.forEach((track, i) => {
             tracks.push(
-                <div  key={i}>
+                <div key={i}>
                     <img src={track?.album?.images[0]?.url} alt="track"/>
                     <section>
                         {playing && track?.id === top_tracks[current]?.id ?
@@ -90,6 +89,7 @@ export default function Top_tracks() {
         return tracks
 
     }
+
     function returnArtists(track) {
         let artists = []
         track.artists.forEach((artist, i) => {

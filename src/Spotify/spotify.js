@@ -1,6 +1,7 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 const clientId = "ba2fadc1b38042899afc3baddc951cfb";
-const redirectUri = "https://flashcodx.github.io/spotify";
+// const redirectUri = "http://localhost:3000/";
+const redirectUri = "http://flashcodx.github.io/Spotify/";
 const scopes = [
     "user-read-currently-playing",
     "user-read-recently-played",

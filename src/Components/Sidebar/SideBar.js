@@ -4,26 +4,22 @@ import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import {useDataValue} from "../../Data/DataProvider";
-import {DemoData} from "../../DemoData/DemoData";
 
 export default function SideBar() {
-    const [{playlists, demo}] = useDataValue();
+    const [{playlists}] = useDataValue();
 
-    function Demo() {
-        let Playlists = []
-        DemoData.playlists.forEach((playlist, i) => {
-            Playlists.push(<div key={i}>{playlist.name}</div>)
-        })
-        return Playlists
-    }
 
-    function LoggedIn() {
+
+    function returnPlaylists(){
         let Playlists = []
         playlists.forEach((playlist, i) => {
-            Playlists.push(<div key={i}>{playlist.name}</div>)
+            Playlists.push(<div key={i}>{playlist?.name}</div>)
         })
         return Playlists
     }
+
+
+
 
     return (
         <div className={'sidebar'}>
@@ -51,7 +47,7 @@ export default function SideBar() {
                     <hr/>
                 </div>
                 <section>
-                    {demo ? Demo() : LoggedIn()}
+                    {returnPlaylists()}
                 </section>
             </div>
 
