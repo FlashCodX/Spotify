@@ -1,26 +1,27 @@
 # SPOTIFY
 
-![alt text]('assets/preview.png')
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-This Project is replica of the original Spotify Web App, made with React Js.
 
-> Check out the app:  flashcodx.github.io/Spotify/
 
+#### This Project is replica of the original Spotify Web App, made with React Js.
+
+> Check out the app:  [https://flashcodx.github.io/Spotify/](https://flashcodx.github.io/Spotify/)
+
+![preview](images/preview.jpg)
 
 # Features!
   - Has a Demo and a Login Option with the Spotify API.
-  - Displays Current User Playlists, favorite tracks and Artists.
-  - Can play a preview of the desired song.
+  - Displays User Playlists, favorite tracks and Artists.
+  - Can play a preview of the picked song.
   - Has volume Control, pause and play functionality.
   - Can skip to a position by clicking on the progress bar.
 
 
 ## Tech
-* [REACT] - HTML enhanced for web apps!
+* [React] - HTML enhanced for web apps!
 * [WebStorm Editor] - awesome web-based text editor made by JetBrains.
-* [SPOTIFY API] - Used to gather data for the Application.
+* [Spotify API] - Used to gather data for the Application.
 * [Material UI Icons] - Used to display Icons on the App.
 * [Node.js] - Required by React to work properly.
 
@@ -57,7 +58,7 @@ MIT
 
    [React]: <https://reactjs.org/>
    [WebStorm Editor]: <https://www.jetbrains.com/webstorm/r>
-   [SPOTIFY API]: <https://developer.spotify.com/>
+   [Spotify API]: <https://developer.spotify.com/>
    [Material UI Icons]: <https://material-ui.com/pt/components/material-icons/>
    [markdown-it]: <https://github.com/markdown-it/markdown-it>
    [Ace Editor]: <http://ace.ajax.org>
