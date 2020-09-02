@@ -20,7 +20,7 @@
 
 ## Tech
 * [React] - HTML enhanced for web apps!
-* [WebStorm Editor] - awesome web-based text editor made by JetBrains.
+* [WebStorm Editor] - Awesome web-based text editor made by JetBrains.
 * [Spotify API] - Used to gather data for the Application.
 * [Material UI Icons] - Used to display Icons on the App.
 * [Node.js] - Required by React to work properly.
