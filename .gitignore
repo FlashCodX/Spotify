@@ -12,6 +12,11 @@
 
 /build
 
+.gitignore
+.git
+.idea
+
+
 # misc
 .DS_Store
 .env.local
