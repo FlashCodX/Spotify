@@ -28,7 +28,7 @@
 
 ## Requirements and Installation
 
-AVICII requires [Node.js](https://nodejs.org/)  to run.
+ Requires [Node.js](https://nodejs.org/)  to run.
 Also make sure you have  [GIT](https://git-scm.com/) installed, it makes you life easier.
 
 
